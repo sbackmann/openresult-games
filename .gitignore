@@ -6,7 +6,7 @@ __pycache__/
 .ipynb_checkpoints
 
 # Tests & results
-#results/
+results/
 outputs/
 wandb/
 api_usage_openrouter/
