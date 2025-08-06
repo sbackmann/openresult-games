@@ -1,0 +1,5 @@
+- experiment=sh_base_twoplayer_cot
+- llm1.path=anthropic/claude-3.7-sonnet
+- llm2.path=deepseek/deepseek-r1
+- result_dir=results_new
+- seed=9

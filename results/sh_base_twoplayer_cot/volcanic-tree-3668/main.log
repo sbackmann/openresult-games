@@ -1,0 +1,95 @@
+[2025-07-18 09:59:54,013][__main__][INFO] - experiment:
+  personas:
+    persona_0:
+      name: John
+      goals: ''
+      actions: null
+    persona_1:
+      name: Kate
+      goals: ''
+      actions: null
+    persona_2:
+      name: TO change
+      goals: ''
+      actions: null
+    persona_3:
+      name: TO change
+      goals: ''
+      actions: null
+    persona_4:
+      name: TO change
+      goals: ''
+      actions: null
+    num: ${experiment.env.num_agents}
+  name: sh_base_twoplayer_cot
+  scenario: sh_base
+  env:
+    name: sh_base_twoplayer_cot
+    max_num_rounds: 1
+    max_input: 120
+    min_input: 80
+    defect_base: 3
+    min_payoff_to_survive: null
+    inject_universalization: false
+    num_agents: 2
+    perturbations: []
+    event_expiration_months: 3
+  agent:
+    system_prompt: nocom
+    cot_prompt: think_step_by_step
+    reveal_identity: false
+    act:
+      consider_identity_persona: true
+    reflect:
+      exclude_thoughts_from_prompt: true
+    store:
+      expiration_delta:
+        days: 100
+code_version: v7.0
+group_name: ''
+llm1:
+  path: qwen/qwen3-32b
+  backend: openrouter
+  is_api: true
+  render: false
+  temperature: 0.0
+  top_p: 1.0
+llm2:
+  path: google/gemini-2.0-flash-001
+  backend: openrouter
+  is_api: true
+  render: false
+  temperature: 0.0
+  top_p: 1.0
+mix_llm:
+- llm: ${llm1}
+- llm: ${llm2}
+framework_model: ${llm1}
+seed: 0
+debug: false
+result_dir: results_new
+
+[2025-07-18 10:00:07,991][moralsim.utils.logger][INFO] - Storage name: volcanic-tree-3668-6ryfe6ta
+[2025-07-18 10:00:09,382][sentence_transformers.SentenceTransformer][INFO] - Load pretrained SentenceTransformer: mixedbread-ai/mxbai-embed-large-v1
+[2025-07-18 10:00:12,291][sentence_transformers.SentenceTransformer][INFO] - 2 prompts are loaded, with the keys: ['query', 'passage']
+[2025-07-18 10:00:13,537][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 10:01:01,243][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 10:01:01,271][pathfinder.api][INFO] - Total token in: 286, total token out: 3115, total cost: 0.0009631
+[2025-07-18 10:01:02,208][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 10:01:04,895][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 10:01:04,896][pathfinder.api][INFO] - Total token in: 575, total token out: 3501, total cost: 0.0011464000000000001
+[2025-07-18 10:01:06,678][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 10:01:50,741][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 10:01:50,742][pathfinder.api][INFO] - Total token in: 865, total token out: 5519, total cost: 0.0017808000000000001
+[2025-07-18 10:01:51,818][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 10:01:55,577][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 10:01:55,579][pathfinder.api][INFO] - Total token in: 1190, total token out: 5711, total cost: 0.0018709000000000002
+[2025-07-18 10:01:56,598][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 10:02:03,640][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 10:02:03,641][pathfinder.api][INFO] - Total token in: 1504, total token out: 5994, total cost: 0.0019872
+[2025-07-18 10:02:04,943][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 10:02:05,252][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 10:02:05,255][pathfinder.api][INFO] - Total token in: 1798, total token out: 6041, total cost: 0.0020354
+[2025-07-18 10:02:05,596][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 10:02:07,436][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 10:02:07,437][pathfinder.api][INFO] - Total token in: 2087, total token out: 6308, total cost: 0.0021711

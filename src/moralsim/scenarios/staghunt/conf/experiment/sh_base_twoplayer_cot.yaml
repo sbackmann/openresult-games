@@ -1,0 +1,11 @@
+defaults:
+  - sh_base_baseline
+
+name: sh_base_twoplayer_cot
+scenario: sh_base
+
+env:
+  name: sh_base_twoplayer_cot
+
+agent:
+  cot_prompt: think_step_by_step

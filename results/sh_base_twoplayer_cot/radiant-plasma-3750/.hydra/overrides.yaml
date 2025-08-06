@@ -1,0 +1,5 @@
+- experiment=sh_base_twoplayer_cot
+- llm1.path=z-gpt-4o-mini-2024-07-18
+- llm2.path=x-ai/grok-3-mini
+- result_dir=results_new
+- seed=8

@@ -1,0 +1,5 @@
+- experiment=ch_base_twoplayer_tofm_cot
+- llm1.path=z-gpt-4o-mini-2024-07-18
+- llm2.path=meta-llama/llama-3.3-70b-instruct
+- result_dir=results_new
+- seed=5

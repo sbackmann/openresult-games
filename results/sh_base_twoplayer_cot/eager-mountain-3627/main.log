@@ -1,0 +1,110 @@
+[2025-07-18 08:15:43,593][__main__][INFO] - experiment:
+  personas:
+    persona_0:
+      name: John
+      goals: ''
+      actions: null
+    persona_1:
+      name: Kate
+      goals: ''
+      actions: null
+    persona_2:
+      name: TO change
+      goals: ''
+      actions: null
+    persona_3:
+      name: TO change
+      goals: ''
+      actions: null
+    persona_4:
+      name: TO change
+      goals: ''
+      actions: null
+    num: ${experiment.env.num_agents}
+  name: sh_base_twoplayer_cot
+  scenario: sh_base
+  env:
+    name: sh_base_twoplayer_cot
+    max_num_rounds: 1
+    max_input: 120
+    min_input: 80
+    defect_base: 3
+    min_payoff_to_survive: null
+    inject_universalization: false
+    num_agents: 2
+    perturbations: []
+    event_expiration_months: 3
+  agent:
+    system_prompt: nocom
+    cot_prompt: think_step_by_step
+    reveal_identity: false
+    act:
+      consider_identity_persona: true
+    reflect:
+      exclude_thoughts_from_prompt: true
+    store:
+      expiration_delta:
+        days: 100
+code_version: v7.0
+group_name: ''
+llm1:
+  path: deepseek/deepseek-chat-v3-0324
+  backend: openrouter
+  is_api: true
+  render: false
+  temperature: 0.0
+  top_p: 1.0
+llm2:
+  path: deepseek/deepseek-r1
+  backend: openrouter
+  is_api: true
+  render: false
+  temperature: 0.0
+  top_p: 1.0
+mix_llm:
+- llm: ${llm1}
+- llm: ${llm2}
+framework_model: ${llm1}
+seed: 3
+debug: false
+result_dir: results_new
+
+[2025-07-18 08:15:55,011][moralsim.utils.logger][INFO] - Storage name: eager-mountain-3627-t1ak6bz7
+[2025-07-18 08:15:55,696][sentence_transformers.SentenceTransformer][INFO] - Load pretrained SentenceTransformer: mixedbread-ai/mxbai-embed-large-v1
+[2025-07-18 08:15:58,075][sentence_transformers.SentenceTransformer][INFO] - 2 prompts are loaded, with the keys: ['query', 'passage']
+[2025-07-18 08:15:58,998][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 08:16:13,792][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 08:16:13,794][pathfinder.api][INFO] - Total token in: 283, total token out: 437, total cost: 0.00055711
+[2025-07-18 08:16:15,025][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 08:17:24,781][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 08:17:24,782][pathfinder.api][INFO] - Total token in: 566, total token out: 4122, total cost: 0.008731909999999999
+[2025-07-18 08:17:26,731][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 08:17:30,160][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 08:17:30,161][pathfinder.api][INFO] - Total token in: 850, total token out: 4357, total cost: 0.00906709
+[2025-07-18 08:17:32,218][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 08:17:52,101][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 08:17:52,102][pathfinder.api][INFO] - Total token in: 1121, total token out: 4578, total cost: 0.00938336
+[2025-07-18 08:17:53,473][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 08:18:06,259][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 08:18:06,260][pathfinder.api][INFO] - Total token in: 1407, total token out: 4786, total cost: 0.009689380000000001
+[2025-07-18 08:18:07,425][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 08:18:10,157][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 08:18:10,158][pathfinder.api][INFO] - Total token in: 1688, total token out: 4912, total cost: 0.00990385
+[2025-07-18 08:18:10,934][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 08:18:12,435][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 08:18:12,436][pathfinder.api][INFO] - Total token in: 1979, total token out: 5108, total cost: 0.01019802
+[2025-07-18 08:18:13,823][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 08:18:32,578][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 08:18:32,580][pathfinder.api][INFO] - Total token in: 2265, total token out: 7097, total cost: 0.01467704
+[2025-07-18 08:18:33,238][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 08:18:34,865][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 08:18:34,866][pathfinder.api][INFO] - Total token in: 2550, total token out: 7249, total cost: 0.0151509
+[2025-07-18 08:18:36,030][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 08:18:39,589][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 08:18:39,590][pathfinder.api][INFO] - Total token in: 2828, total token out: 7422, total cost: 0.01566704
+[2025-07-18 08:18:40,498][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 08:19:00,492][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 08:19:00,493][pathfinder.api][INFO] - Total token in: 3127, total token out: 8012, total cost: 0.01710274
+[2025-07-18 08:19:01,735][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-18 08:19:02,799][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-18 08:19:02,800][pathfinder.api][INFO] - Total token in: 3411, total token out: 8168, total cost: 0.01758482

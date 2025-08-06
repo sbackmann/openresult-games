@@ -1,0 +1,5 @@
+- experiment=ch_base_twoplayer_cot
+- llm1.path=z-gpt-o3-mini-2025-01-31
+- llm2.path=deepseek/deepseek-r1
+- result_dir=results_new
+- seed=9

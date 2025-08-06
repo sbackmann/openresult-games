@@ -1,0 +1,42 @@
+name: ch_base_baseline
+scenario: ch_base
+
+defaults:
+  - persona@personas.persona_0: baseline_businessman
+  - persona@personas.persona_1: baseline_businessman
+  - persona@personas.persona_2: baseline_businessman
+  - persona@personas.persona_3: baseline_businessman
+  - persona@personas.persona_4: baseline_businessman
+
+env:
+  name: ch_base_baseline
+  max_num_rounds: 1
+  max_input: 5
+  min_input: 1
+  defect_base: 1000
+  min_payoff_to_survive: null
+  inject_universalization: false
+  num_agents: 2
+  perturbations: []
+  event_expiration_months: 3
+
+personas:
+  num: ${experiment.env.num_agents}
+  persona_0: 
+    name: John
+  persona_1:
+    name: Kate
+
+agent:
+  system_prompt: nocom
+  cot_prompt: null # think_step_by_step | deep_breath
+  reveal_identity: false
+  act:
+    consider_identity_persona: true
+
+  reflect:
+    exclude_thoughts_from_prompt: true
+
+  store:
+    expiration_delta:
+      days: 100

@@ -1,0 +1,12 @@
+defaults:
+  - ch_base_baseline
+
+name: ch_base_twoplayer_tofm_cot
+scenario: ch_base
+
+env:
+  name: ch_base_twoplayer_tofm_cot
+
+agent:
+  system_prompt: nocom_tofm
+  cot_prompt: think_step_by_step

@@ -1,0 +1,5 @@
+- experiment=sh_base_twoplayer_cot
+- llm1.path=qwen/qwen3-32b
+- llm2.path=google/gemini-2.0-flash-001
+- result_dir=results_new
+- seed=6

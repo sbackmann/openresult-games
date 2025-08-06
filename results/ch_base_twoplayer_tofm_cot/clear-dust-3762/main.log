@@ -1,0 +1,110 @@
+[2025-07-21 15:57:56,137][__main__][INFO] - experiment:
+  personas:
+    persona_0:
+      name: John
+      goals: ''
+      actions: null
+    persona_1:
+      name: Kate
+      goals: ''
+      actions: null
+    persona_2:
+      name: TO change
+      goals: ''
+      actions: null
+    persona_3:
+      name: TO change
+      goals: ''
+      actions: null
+    persona_4:
+      name: TO change
+      goals: ''
+      actions: null
+    num: ${experiment.env.num_agents}
+  name: ch_base_twoplayer_tofm_cot
+  scenario: ch_base
+  env:
+    name: ch_base_twoplayer_tofm_cot
+    max_num_rounds: 1
+    max_input: 5
+    min_input: 1
+    defect_base: 1000
+    min_payoff_to_survive: null
+    inject_universalization: false
+    num_agents: 2
+    perturbations: []
+    event_expiration_months: 3
+  agent:
+    system_prompt: nocom_tofm
+    cot_prompt: think_step_by_step
+    reveal_identity: false
+    act:
+      consider_identity_persona: true
+    reflect:
+      exclude_thoughts_from_prompt: true
+    store:
+      expiration_delta:
+        days: 100
+code_version: v7.0
+group_name: ''
+llm1:
+  path: z-gpt-o3-mini-2025-01-31
+  backend: openrouter
+  is_api: true
+  render: false
+  temperature: 0.0
+  top_p: 1.0
+llm2:
+  path: deepseek/deepseek-r1
+  backend: openrouter
+  is_api: true
+  render: false
+  temperature: 0.0
+  top_p: 1.0
+mix_llm:
+- llm: ${llm1}
+- llm: ${llm2}
+framework_model: ${llm1}
+seed: 2
+debug: false
+result_dir: results_new
+
+[2025-07-21 15:58:07,146][moralsim.utils.logger][INFO] - Storage name: clear-dust-3762-k987sk04
+[2025-07-21 15:58:07,928][sentence_transformers.SentenceTransformer][INFO] - Load pretrained SentenceTransformer: mixedbread-ai/mxbai-embed-large-v1
+[2025-07-21 15:58:10,556][sentence_transformers.SentenceTransformer][INFO] - 2 prompts are loaded, with the keys: ['query', 'passage']
+[2025-07-21 15:58:23,214][httpx][INFO] - HTTP Request: POST https://openai-zjin-5.openai.azure.com/openai/deployments/z-gpt-o3-mini-2025-01-31/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+[2025-07-21 15:58:23,220][pathfinder.api][INFO] - OpenAI system_fingerprint: fp_e1882df059
+[2025-07-21 15:58:23,221][pathfinder.api][INFO] - Total token in: 321, total token out: 1762, total cost: 0.0081059
+[2025-07-21 15:58:24,431][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 15:58:39,599][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-21 15:58:39,600][pathfinder.api][INFO] - Total token in: 649, total token out: 2834, total cost: 0.01060686
+[2025-07-21 15:58:51,206][httpx][INFO] - HTTP Request: POST https://openai-zjin-5.openai.azure.com/openai/deployments/z-gpt-o3-mini-2025-01-31/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+[2025-07-21 15:58:51,208][pathfinder.api][INFO] - OpenAI system_fingerprint: fp_e1882df059
+[2025-07-21 15:58:51,209][pathfinder.api][INFO] - Total token in: 974, total token out: 4337, total cost: 0.01757756
+[2025-07-21 15:58:56,512][httpx][INFO] - HTTP Request: POST https://openai-zjin-5.openai.azure.com/openai/deployments/z-gpt-o3-mini-2025-01-31/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+[2025-07-21 15:58:56,514][pathfinder.api][INFO] - OpenAI system_fingerprint: fp_e1882df059
+[2025-07-21 15:58:56,514][pathfinder.api][INFO] - Total token in: 1343, total token out: 5130, total cost: 0.021472659999999998
+[2025-07-21 15:59:00,519][httpx][INFO] - HTTP Request: POST https://openai-zjin-5.openai.azure.com/openai/deployments/z-gpt-o3-mini-2025-01-31/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+[2025-07-21 15:59:00,520][pathfinder.api][INFO] - OpenAI system_fingerprint: fp_e1882df059
+[2025-07-21 15:59:00,522][pathfinder.api][INFO] - Total token in: 1672, total token out: 5516, total cost: 0.02353296
+[2025-07-21 15:59:05,588][httpx][INFO] - HTTP Request: POST https://openai-zjin-5.openai.azure.com/openai/deployments/z-gpt-o3-mini-2025-01-31/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+[2025-07-21 15:59:05,590][pathfinder.api][INFO] - OpenAI system_fingerprint: fp_e1882df059
+[2025-07-21 15:59:05,591][pathfinder.api][INFO] - Total token in: 2016, total token out: 6205, total cost: 0.02694296
+[2025-07-21 15:59:10,415][httpx][INFO] - HTTP Request: POST https://openai-zjin-5.openai.azure.com/openai/deployments/z-gpt-o3-mini-2025-01-31/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+[2025-07-21 15:59:10,416][pathfinder.api][INFO] - OpenAI system_fingerprint: fp_e1882df059
+[2025-07-21 15:59:10,417][pathfinder.api][INFO] - Total token in: 2366, total token out: 6803, total cost: 0.02995916
+[2025-07-21 15:59:16,287][httpx][INFO] - HTTP Request: POST https://openai-zjin-5.openai.azure.com/openai/deployments/z-gpt-o3-mini-2025-01-31/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+[2025-07-21 15:59:16,289][pathfinder.api][INFO] - OpenAI system_fingerprint: fp_e1882df059
+[2025-07-21 15:59:16,290][pathfinder.api][INFO] - Total token in: 2733, total token out: 7616, total cost: 0.03394006
+[2025-07-21 15:59:17,808][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 16:00:09,481][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-21 16:00:09,483][pathfinder.api][INFO] - Total token in: 3063, total token out: 10247, total cost: 0.039840640000000004
+[2025-07-21 16:00:10,135][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 16:00:11,690][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-21 16:00:11,692][pathfinder.api][INFO] - Total token in: 3381, total token out: 10426, total cost: 0.04038986000000001
+[2025-07-21 16:00:12,899][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 16:00:16,726][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-21 16:00:16,727][pathfinder.api][INFO] - Total token in: 3713, total token out: 10567, total cost: 0.04086324000000001
+[2025-07-21 16:00:17,788][httpx][INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 16:00:19,591][pathfinder.api][INFO] - OpenAI system_fingerprint: None
+[2025-07-21 16:00:19,592][pathfinder.api][INFO] - Total token in: 4028, total token out: 10692, total cost: 0.04129324000000001
